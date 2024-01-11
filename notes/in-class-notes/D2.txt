@@ -1,0 +1,23 @@
+OOP --> Object Oriented Programming
+	- Creation and maintence of objects (virtualizations of read world things)
+	- By updating and manipulating the state of these objects we can do logic and complete tasks
+4 Pillars of OOP?
+	- Encapsulation -> Providing a way to protect the data inside an object and only allow specific alterations
+	- Abstraction -> Hiding implementation details to simplify interfaces
+	- Inheritance -> Passing down state and functionality from a parent class to a child class
+	- Polymorphism -> Means many forms. Refers to how we can update methods to have multiple functionality 			despite the same name
+
+Abstraction is generally the hardest Pillar to fully understand. It is achieved through the use of interfaces and abstract classes. 
+	- Abstract classes (use the abstract keyword) are classes that cannot be instantiated (they're meant to be 	inherited). They contain both concrete methods (methods with a method body) and abstract methods (methods 	that must be implemented in the inheriting class.
+
+	- Interfaces are structures in java that are also abstract. They only contain abstract methods (not 	including any default/static methods) and you can inherit multiple interfaces. Used to describe qualities
+
+
+
+ArrayList:
+	[1,2,3] --> Retrieval is fast
+	[1,2,3,4,5,6] --> Needs to copy and resize several times to accomodate the change (slower)
+
+LinkedList:
+	1 -> 2 -> 3 --> Retrieval is slower
+	1 -> 2 -> 4 -> 3 --> Insertion/Deletion is faster since it just needs to update a pointer
