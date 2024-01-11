@@ -1,0 +1,51 @@
+# Java
+
+What is Java? Why do we like to use it?
+- Object Oriented
+- Statically Typed
+- Compiled (Makes sure the whole file is valid before attempting to run)
+- Platform Independent (WORA (Write once run anywhere) -> We can reliably expect our programs to work anywhere)
+- Progamming Language
+- Used for Server Side Programming (Backend)
+
+Object Oriented Programming?
+- 4 Pillars (Abstraction, Encapsulation, Polymorphism, Inheritance)
+- Coding Paradigm that focuses on the creation of objects from classes
+- Objects are virtualizations or essentially representations of real-world things
+	- Objects have members associated with them
+		- Fields (attributes: age, height, name)
+		- Methods (abilities (things the object can do): walk, talk, drive, run)
+	- Objects are built from a blueprint called a Class.
+	
+Typing?
+- Statically Typed: Specify the type of the variable
+	- ex: int num = 10 (datatype variableName = value)
+	- Dynamically typed (datatypes can change and aren't require to be specified)
+		- ex. let x = 5 --> x= "Five" --> x = false
+
+
+Access Modifiers?
+- Public, protected, default, private
+- Controls access to classes and their members
+- Public -> can access this class or member from anywhere within the program
+- Protected -> Can access within the package and within subclasses (outside of the package)
+- Default (none) -> Can access within the same package
+- Private -> can be accessed only within the class itself
+
+Encapsulation?
+- Restriction of access to data through use of getters/setters (mutators)
+- One of the pillars of Object-Oriented Programming (we should strive to acheive this where we can)
+- How do we acheive encapsulation?
+	- Set all of our instance variable to private
+	- Add getters/setters for each variable
+
+
+Today we covered:
+Classes
+Objects
+Java (overview)
+Access Modifiers
+Non-Access Modifiers
+Datatypes (primitives)
+Class members (Fields and methods)
+Encapsulation
