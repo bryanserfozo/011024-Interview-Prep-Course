@@ -1,10 +1,4 @@
-# Week 2: SQL & JDBC Study Questions
-
-## `Study Questions`
-> Go over these questions to prepare for Week 5 QC
-<br>
-
-## SQL Questions
+# SQL Questions
 1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
     *  Structured Query Language - allows us to interact with and manipulate relational databases like Oracle, Postgres, MySQL
 2.  Draw a simple ERD for modeling Students and Classes
