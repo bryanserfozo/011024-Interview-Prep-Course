@@ -95,4 +95,9 @@ public class QuestionService {
         return qd.findAllByTopicIgnoreCase(topic);
     }
 
+    // We need a quick method for getting ALL of the questions so we'll do it like so
+    public List<Question> getAllQuestions(){
+        return qd.findAll();
+    }
+
 }
