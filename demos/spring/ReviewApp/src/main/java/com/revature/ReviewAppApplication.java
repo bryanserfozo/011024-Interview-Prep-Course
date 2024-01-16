@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
 
+
 @SpringBootApplication
 // @SpringBootApplication is an important annotation. First, it denotes that this is in-fact a Spring Boot application
 // It's a combination of 3 other annotations

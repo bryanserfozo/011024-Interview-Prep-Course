@@ -271,46 +271,94 @@
 # Spring / MSA
 
 ## Spring Core
-- controllers
-- What IoC (inversion of control) is? 
+- What is Spring? Benefits of using it?
+    - Spring is a family of frameworks for Java that are used to help us develop enterprise level applications quickly and easily. 
+    - Has multiple projects associated with specific tasks (Web MVC, Data JPA, Boot, Security) that are designed to be plug and play for your application based off your needs
+    - Annotation-Based Configuration is supported, as well as programatic configruation and xml configuration
+        - Configuring the dependencies and how they're wired together (dependency injection and IOC)
+    
 - What is dependency injection? 
-- What is IOC?
-- What is Dependency Injection? 
-- What is inversion-of-Control -IOC? 
-- What Spring Annotations do you know? 
-- What is the purpose of Spring? 
-- What are the benefits of using Spring? 
-- Asked what dependency injection is
-- Asked about RESTful API
+    - Dependency Injection is a design pattern where we attempt to remove dependencies of a program to some external location
+    - Dependency Injection is used to seperate the responsibility of components
+    - By Injecting an object as a depenedency it allows for loose coupling
+    - Additional Benefits is that it makes things significantly easier to test (through the use of mocked classes and such)
+
+- What IoC (inversion of control) is? 
+    - Passing off the responsibilty of a task to something else
+    - In our case, we're passing off the responsibility of creation, configuration and management of our beans to Spring so we have more time to focus on developing functionality.
+
+- What Spring Core Annotations do you know? 
+    - @ComponentScan (Scans for stereotype annotations)
+    - @Component
+    - @Repository
+    - @Service
+    - @Controller
+    - @Autowired
+    - @Configuration
+
+- What is a Controller?
+    - A controller is a class that regulates web traffic
+    - First thing that accepts web request and directs it to the appropriate place
+    - Spring has a front-controller design pattern (i.e. one controller that takes in EVERY request and sends each one to the appropriate handler)
 
 ## Spring Data JPA
 - How did you connect Spring JPA?
+    - Need to have the Spring Data JPA project dependency (spring-boot-starter works for this)
+    - Provide database credentials in the application.properties (username, password and database jdbc url)
+- What Spring Data JPA annotations do you know?
+    - @Entity
+    - @Table
+    - @Column
+    - @Id
+    - @GeneratedValue
+    - @Query (Used to define custom queries in our DAO interfaces)
 
-## Spring MVC
-- RestController 
-- Spring MVC
-- Spring MVC 
-- restcontrollers
+## Spring Web MVC
+- What is Spring MVC?
+    - Spring MVC is a module in the spring framework (model, view, controller design pattern). Model describes data and business rules of the app, view controls UI and display details, and controller handles all the web requests and controlling the flow between the other two. Used to handle to our web traffic.
+
+- What is @RestController
+    - Annotation used for building RESTful web apps. Combines the annotations @Controller and @ResponseBody so it becomes more conveinent to handle HTTP requests in a RESTful way (Returning into JSON)
+
+- Changing port in spring
+    - We can change this for development purposes 
+    - server.port=9090 in application.properties file
+- What Spring Web MVC annotations do you know?
+    - @RestController
+    - @RequestBody
+    - @ResponseBody
+    - @GetMapping, PostMapping, PutMapping, DeleteMapping
+    - @RequestMapping
+    - @PathVariable
+    - @RequestParam
 
 ## Spring Boot
-- Spring Boot
-- Profiles 
-- spring boot annotations
-- Spring Boot 
-- Changing port in spring
-- What Spring boot is?
-- Asked about @SpringBootApplication annotation
-- What is @EnableConfiguration? 
-- Features of spring boot 
-- Spring boot annotations 
+- What is Spring Boot? Benefits?
+    - Spring boot was a particularly impactful Spring project designed to "boot" up our application as quickly as possble
+        - Opionated framework meaning it has preset configuration details based off common use cases
+        - Helpful tools like an embedded tomcat server for web development
+        - Starter code is easy to generate with start.spring.io 
+
+- What are some spring boot annotations?
+    - @SpringBootApplication
+    - @SpringBootConfiguration
+
 - Type of dependency injection in Spring boot. What is the difference between them?
-- What are some annotations you used in Spring Boot?
-- Asked about @SpringBootApplication annotation 
+    - Constructor Injection
+        - Preferred method
+        - More secure since it guarantees the dependencies will be filled
+    - Setter Injection
+        - Used for partial dependencies
+        - Also helpful for solving circular dependencies
+
+- Profiles 
+    - You can different "profiles" in Spring boot depending on the use case you're trying develop. You may have a production and dev profile which will allow you to use specific beans and enviroment details when utilizing each profile. Specify the profile in the application.properties file
 
 ## Microservices
-- how to call an api from another microservice and use it within your own api 
-- What are micro-services & web-services. 
-- what are microservices
+- What are micro-services? 
+    - Breaking our application in smaller mini-applications that interact with each other through some sort of messaging. Advantages of this is more flexible projects with individual pieces that can scale as the need arises.
+    - Each microservice acts as its own application with its own db. 
+
 
 
 # Angular / Frontend
