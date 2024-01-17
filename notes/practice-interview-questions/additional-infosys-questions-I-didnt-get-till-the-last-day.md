@@ -81,26 +81,75 @@ Words cannot express how angry this makes me since they made it seem like these 
 
 # Angular - 37 questions (18.5% of Total Questions)
 - What is a Component in Angular? - Asked 3 times
+    - A component in Angular is a fundamental building block that encapsulates a part of the user interface and its behavior. It consists of a TypeScript class, an HTML template, and optional style files. Components are used to create reusable and modular UI elements.
 - Which files gets generated when you create an Angular component?
+    - When you create an Angular component, the following files are generated:
+        - Component TypeScript file (e.g., component.ts)
+        - Component HTML file (e.g., component.html)
+        - Component CSS/Style file (e.g., component.css)
+
 - How to make a Component available to be used by other Components
+    - To make a component available for use by other components, you need to export the component class in its TypeScript file using the 'export' keyword. For example:
+        ```typescript
+        export class MyComponent { /* ... */ }
+        ```
 - Data binding in angular? - Asked 5 times
+    - Data binding in Angular allows synchronization of data between the component and the view. There are several types of data binding, including:
+        - Interpolation ({{ data }})
+        - Property binding ([property]="data")
+        - Event binding ( (event)="handler()" )
+        - Two-way binding ([(ngModel)]="data")
 - How would you save the previous input and display it on the UI when typing into a text box in Angular?
+    - You can achieve this by using ngModel for two-way data binding and storing the previous input in a variable. For example:
+        ```typescript
+        <input [(ngModel)]="inputData" (input)="savePreviousInput()">
+        ```
 - What are annotations in angular?
+    - Annotations in Angular refer to the decorators used to add metadata to classes, allowing Angular to understand and process them. Common decorators include @Component, @Directive, @Injectable, etc.
+
 - How do you connect your frontend with your backend using Angular and Spring Boot? - Asked 3 times
+    - You can connect Angular with Spring Boot by making HTTP requests. Angular's HttpClient module is commonly used to send HTTP requests to Spring Boot REST APIs. Configure API endpoints in Angular and handle them in Spring Boot controllers.
+
 - What are some Angular lifecycle hooks?
+    - Angular lifecycle hooks are methods that provide visibility into the component lifecycle. Some hooks include ngOnInit, ngOnDestroy, ngAfterViewInit, etc.
+
 - What is ngoninit in Angular? - Asked 2 times
+    - ngOnInit is a lifecycle hook in Angular that is called after the component has been initialized. It is commonly used to perform component initialization tasks.
+
 - name some Angular directives and what they do? - Asked 3 times
+    - *ngIf: Conditionally renders content based on a given expression.
+    - *ngFor: Iterates over a collection and renders content for each item.
+    - *ngSwitch: Renders content based on a series of conditions.
+
 - What does an *ngif do - Asked 2 times
-- ngFor?
-- What is ngShow?
+    - *ngIf is a structural directive in Angular that conditionally renders or removes content based on the truthiness of an expression.
+
+- ngFor? - Asked 2 times
+    - ngFor is a structural directive that iterates over a collection (array or iterable) and repeats a template for each item in the collection.
+
 - What are some angular dependencies?
+    - Angular dependencies include core Angular modules like FormsModule, HttpClientModule, RouterModule, etc. These modules provide essential functionality for building Angular applications.
+
 - how do you accomplish input validation in Angular? - Asked 2 times
+    - Input validation in Angular is achieved through built-in validators and custom validation functions. Validators can be applied to form controls using directives like ngModel or reactive form validators.
+
 - How do you validate a form? - Asked 2 times
+    - Form validation in Angular can be done using template-driven forms or reactive forms. Validators are applied to form controls, and the form's overall validity can be checked to determine if it is valid or not.
+
 - What are Decorators (Angular)? - Asked 2 times
+    - Decorators in Angular are used to annotate classes, providing metadata that Angular uses to understand and configure the class. Common decorators include @Component, @Directive, @Injectable, etc.
+
 - What are the methods in Angular?
+    - Angular components and services can have methods defined within their classes. The methods perform specific tasks or actions and are called in response to events or application logic.
+
 - What are pipes and how you use them? - Asked 2 times
+    - Pipes in Angular are used for data transformation in the template. They take in data as input and transform it before displaying it in the view. Examples include the date pipe, uppercase pipe, etc.
+
 - what is $root in angular
+    - In Angular, there is no concept of $root. In AngularJS (Angular 1), $rootScope was a global scope accessible throughout the application. Angular 2 and later versions do not have a direct equivalent to $rootScope.
+
 - what is the difference between Angular 1 and Angular 2?
+    - Angular 2 and later versions are a complete rewrite of AngularJS (Angular 1). Some key differences include the introduction of components, a more modular architecture, improved performance, and the use of TypeScript as the primary language.
 
 # HTML/CSS/JS - 5 questions (2.5% of Total Questions)
 - What types are in JavaScript?
