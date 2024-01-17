@@ -16,6 +16,7 @@ export class QuestionContainerComponent implements OnInit {
   totalCorrect: number = 0;
   totalIncorrect: number = 0;
 
+  // This is dependency injection
   constructor(private questionService: QuestionService) {}
 
   ngOnInit() {
