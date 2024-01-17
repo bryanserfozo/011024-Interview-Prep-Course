@@ -1,0 +1,17 @@
+<div class="question-container">
+    <div class="question-card" [ngClass]="{'answered': hasAnswered}">
+      <h2>{{ questionData.question }}</h2>
+  
+      <div *ngFor="let answer of shuffledAnswers" (click)="onSelectAnswer(answer)" [ngClass]="{
+              'selected-answer': answer === selectedAnswer && hasAnswered,
+              'correct-answer': answer === questionData.correctAnswer && hasAnswered && isAnsweredCorrectly === true,
+              'incorrect-answer': answer !== questionData.correctAnswer && answer === selectedAnswer && hasAnswered && isAnsweredCorrectly === false
+            }">
+        {{ answer }}
+      </div>
+  
+      <div *ngIf="isAnsweredCorrectly === true" class="result correct-result">Correct!</div>
+      <div *ngIf="isAnsweredCorrectly === false" class="result incorrect-result">Incorrect!</div>
+    </div>
+  </div>
+  

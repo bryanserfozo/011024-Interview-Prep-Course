@@ -1,0 +1,23 @@
+<div>
+    <label for="topicFilter">Filter by Topic:</label>
+    <select id="topicFilter" [(ngModel)]="selectedTopic" (change)="onTopicChange()">
+      <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+    </select>
+  </div>
+  
+  <div *ngIf="filteredQuestions.length > 0; else noQuestions">
+    <!-- Display filtered questions -->
+    <div *ngFor="let question of filteredQuestions">
+        <app-question [questionData]="question" (answerSelected)="onAnswerSelected($event)"></app-question>
+    </div>
+  </div>
+  
+  <ng-template #noQuestions>
+    <p>No questions available for the selected topic.</p>
+  </ng-template>
+  
+  <div>
+    <p>Total Correct Answers: {{ totalCorrect }}</p>
+    <p>Total Incorrect Answers: {{ totalIncorrect }}</p>
+  </div>
+  

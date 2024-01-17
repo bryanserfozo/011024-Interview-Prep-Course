@@ -18,6 +18,7 @@ import java.util.List;
  */
 @RequestMapping("/questions") // -> Implies all of our requests will be under http://localhost:8080/question
 // - @RequestMapping -> Class level annotation that allows us to describe details about this http endpoint
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class QuestionController {
     /*
     Controller classes are those that are in charge of handling web traffic.

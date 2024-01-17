@@ -1,0 +1,25 @@
+<div class="question-entry-container">
+    <form>
+      <label for="topic">Topic:</label>
+      <select id="topic" [(ngModel)]="newQuestion.topic" name="topic">
+        <option value="Java">Java</option>
+        <option value="SQL">SQL</option>
+        <option value="Spring">Spring</option>
+        <option value="Angular">Angular</option>
+      </select>
+  
+      <label for="questionText">Question:</label>
+      <textarea [(ngModel)]="newQuestion.question" id="questionText" name="questionText" required></textarea>
+  
+      <label for="correctAnswer">Correct Answer:</label>
+      <input [(ngModel)]="newQuestion.correctAnswer" id="correctAnswer" name="correctAnswer" required>
+  
+      <label for="incorrectAnswer1">Incorrect Answer 1:</label>
+      <input [(ngModel)]="newQuestion.incorrectAnswer1" id="incorrectAnswer1" name="incorrectAnswer1" required>
+  
+      <label for="incorrectAnswer2">Incorrect Answer 2:</label>
+      <input [(ngModel)]="newQuestion.incorrectAnswer2" id="incorrectAnswer2" name="incorrectAnswer2" required>
+  
+      <button (click)="addNewQuestion()">Add Question</button>
+    </form>
+</div>

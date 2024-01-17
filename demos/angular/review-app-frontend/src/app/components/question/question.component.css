@@ -1,0 +1,39 @@
+.question-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjusted for better spacing */
+  }
+  
+  .question-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(33.33% - 16px); /* Adjusted to ensure three questions in a row with spacing */
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Added transition for smoother color change */
+  }
+  
+  div[class^="result"] {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .selected-answer, .correct-answer, .incorrect-answer {
+    background-color: #f8f8f8; /* Default background color for all answer choices */
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .correct-answer {
+    background-color: #d1ffd7;
+  }
+  
+  .incorrect-answer {
+    background-color: #ffb3b3;
+  }
+  
+  .answered {
+    pointer-events: none;
+  }
+  
