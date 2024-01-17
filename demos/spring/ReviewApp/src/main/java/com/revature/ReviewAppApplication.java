@@ -16,7 +16,7 @@ import java.util.List;
 // @EnableAutoConfiguration, @ComponentScan, and @SpringBootConfiguration
 // The responsibility of this annotation is to mark this class as a configuration class and so it knows where to look
 // or scan for other beans to manage
-public class ReviewAppApplication implements CommandLineRunner {
+public class ReviewAppApplication implements CommandLineRunner{
 
 
 
@@ -80,19 +80,19 @@ public class ReviewAppApplication implements CommandLineRunner {
 		System.out.println(qs.getQuestionById(247));
 
 		// Let's add in a few other questions
-		Question newQuestion2 = new Question();
-		newQuestion2.setQuestion("What is the purpose of the final keyword in Java?");
-		newQuestion2.setCorrectAnswer("To declare a variable that cannot be changed");
-		newQuestion2.setIncorrectAnswer1("To indicate the end of a method");
-		newQuestion2.setIncorrectAnswer2("To define a constant value");
-		newQuestion2.setTopic("Java");
-
-		Question newQuestion3 = new Question();
-		newQuestion3.setQuestion("In Java, what is the difference between == and .equals() when comparing objects?");
-		newQuestion3.setCorrectAnswer("== compares the references of objects, while .equals() compares their content");
-		newQuestion3.setIncorrectAnswer1("== compares the content of objects, while .equals() compares their references");
-		newQuestion3.setIncorrectAnswer2("Both are used for reference comparison");
-		newQuestion3.setTopic("JaVA");
+//		Question newQuestion2 = new Question();
+//		newQuestion2.setQuestion("What is the purpose of the final keyword in Java?");
+//		newQuestion2.setCorrectAnswer("To declare a variable that cannot be changed");
+//		newQuestion2.setIncorrectAnswer1("To indicate the end of a method");
+//		newQuestion2.setIncorrectAnswer2("To define a constant value");
+//		newQuestion2.setTopic("Java");
+//
+//		Question newQuestion3 = new Question();
+//		newQuestion3.setQuestion("In Java, what is the difference between == and .equals() when comparing objects?");
+//		newQuestion3.setCorrectAnswer("== compares the references of objects, while .equals() compares their content");
+//		newQuestion3.setIncorrectAnswer1("== compares the content of objects, while .equals() compares their references");
+//		newQuestion3.setIncorrectAnswer2("Both are used for reference comparison");
+//		newQuestion3.setTopic("JaVA");
 
 		Question newQuestion4 = new Question();
 		newQuestion4.setQuestion("What is the purpose of the SQL JOIN operation?");
@@ -102,8 +102,8 @@ public class ReviewAppApplication implements CommandLineRunner {
 		newQuestion4.setTopic("SQL");
 
 		// Add in the questions
-		qs.saveQuestionToDB(newQuestion2);
-		qs.saveQuestionToDB(newQuestion3);
+//		qs.saveQuestionToDB(newQuestion2);
+//		qs.saveQuestionToDB(newQuestion3);
 		qs.saveQuestionToDB(newQuestion4);
 
 		System.out.println("---------------------------------");
