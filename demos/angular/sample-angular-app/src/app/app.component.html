@@ -1,0 +1,26 @@
+<h1>Welcome to angular!</h1>
+<my-new-component></my-new-component>
+<!-- <grocery-item [name]="groceryList[0]"></grocery-item> 
+We want to update our grocery-item to essentially take in an item and display it on the screen
+We'll do this with data binding, specifically property binding []
+<grocery-item [name]="groceryList[1]"></grocery-item>
+<grocery-item [name]="groceryList[2]"></grocery-item> -->
+
+
+<!-- Creating our grocery-tem components with data binding was pretty simple, but there should be a way to iterate over the list of grocery items and create a component for each
+one without having to do it manually 
+
+Angular achieves this through the use of directives
+Structural Directives -> Create new components through conditionals or iteration
+Attribute Directives -> Most commonly used to dynamically style components as they as interacted with
+
+
+To iterate over an array we'd want to use the ngFor directive (structural)-->
+
+<div id="groceryItemContainer" *ngFor="let item of groceryList">
+  <grocery-item [name]="item"></grocery-item>
+</div>
+
+
+<!-- One final thing I want to talk about before we go an view a slightly more complex app is Services in Angular
+    Services provide a nice clean way to get data in all of your components. Components shouldn't be directly in charge of managing the data they're working with -->
