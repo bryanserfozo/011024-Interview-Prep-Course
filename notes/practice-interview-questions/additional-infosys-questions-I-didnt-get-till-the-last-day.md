@@ -4,7 +4,7 @@
 Words cannot express how angry this makes me since they made it seem like these questions needed to be covered but gave me no time to do so. Do your best to study these questions, that's really all I can ask, appreciate you all stepping up and working hard during the sessions
 
 
-# Java - 80 Questions
+# Java - 80 Questions (40% of Total Questions)
 
 ## Core Java - 13 questions (6.5% of Total Questions, 16.25% of Topic Questions)
 - What is an object?
